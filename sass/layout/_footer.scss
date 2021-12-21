@@ -12,15 +12,13 @@
   align-items: baseline;
 }
 
-.foot-address {
-  color: var(--white-color);
+.footer {
+  display: flex;
 
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.74;
+  flex-direction: column;
 }
 
-.foot-logo {
+.footer__logo {
   display: inline-block;
   margin-bottom: 20px;
 
@@ -32,7 +30,22 @@
   text-decoration: none;
 }
 
-.foot-contact-link {
+.footer__title {
+  color: var(--accent-color);
+  font-family: raleway;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.footer-list__address {
+  color: var(--white-color);
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.74;
+}
+
+.footer-list__link {
   display: inline-block;
   color: rgba(255, 255, 255, 0.6);
 
@@ -43,32 +56,22 @@
 
   transition: color 250ms var(--timing-function);
 
-  .item:not(:last-child) {
-    margin-bottom: 9px;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    text-decoration: none;
   }
 }
 
-.foot-list {
-  .foot-contact-link {
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-      text-decoration: none;
-    }
-  }
-}
-
-.footer {
-  display: flex;
-
-  flex-direction: column;
+.footer-list__item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-join {
   margin-left: 70px;
 }
 
-.join-title {
+.footer-join__title {
   color: var(--white-color);
   text-transform: uppercase;
   font-weight: 700;
@@ -78,15 +81,16 @@
   margin-bottom: 20px;
 }
 
-.join-list {
+.footer-join__list {
   display: flex;
   justify-content: center;
-  .item:not(:last-child) {
-    margin-right: 10px;
-  }
 }
 
-.footer-join-link {
+.footer-join__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-join__link {
   display: inline-block;
 
   background-color: rgba(255, 255, 255, 0.1);
@@ -102,14 +106,14 @@
     height: 44px;
     border-radius: 50%;
   }
-
-  .join-logo {
-    margin: 12px;
-    fill: var(--white-color);
-  }
 }
 
-.signup-title {
+.footer-join__icon {
+  margin: 12px;
+  fill: var(--white-color);
+}
+
+.footer-signup__title {
   margin-left: 93px;
   margin-bottom: 20px;
 
@@ -122,7 +126,7 @@
   color: #ffffff;
 }
 
-.signup-form {
+.footer-signup__form {
   margin-left: 93px;
 
   display: flex;
@@ -130,7 +134,7 @@
   align-items: center;
 }
 
-.signup-input {
+.footer-signup__input {
   height: 50px;
   width: 358px;
 
@@ -159,7 +163,7 @@
   }
 }
 
-.signup-button {
+.footer-signup__button {
   display: flex;
   align-items: center;
 
@@ -188,6 +192,6 @@
   fill: var(--white-color);
 }
 
-.signup-icon {
+.footer-signup__icon {
   margin-left: 11px;
 }

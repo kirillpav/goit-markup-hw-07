@@ -1,12 +1,13 @@
 .clients-list {
   display: flex;
   justify-content: center;
-  .item:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 
-.client-link {
+.clients-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list__link {
   display: inline-block;
 
   width: 170px;
